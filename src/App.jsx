@@ -51,7 +51,7 @@ function App(){
   }, []);
 
 
-
+  console.log(jobsData);
 
 
 

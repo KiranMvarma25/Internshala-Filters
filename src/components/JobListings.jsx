@@ -39,7 +39,12 @@ function JobListings(props){
                                 <p>{job.company_name}</p>
                             </div>
                             <div>
-                                <img src={`${job.company_logo}`} alt={`${job.company_name} logo`} style={{ width: '50px', height: '50px', borderRadius: '50px' }} />
+                                {
+                                    job.company_logo ? 
+                                            <img src={`${job.company_logo}`} alt={`${job.company_name} logo`} style={{ width: '50px', height: '50px', borderRadius: '50px' }} />
+                                            : 
+                                            null
+                                }
                             </div>
                         </div>
                         
