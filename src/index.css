@@ -1,0 +1,226 @@
+body{
+    background-color: rgba(242, 243, 245, 0.57);
+}
+
+.Heading{
+    text-align: center;
+    margin-top: -10px;
+    background-color: white;
+    padding-bottom: 15px;
+    margin-left: -10px;
+    margin-right: -7px;
+    padding: 10px;
+}
+
+.Parent{
+    border: 0px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.FiltersParent{
+    border: 0px solid red;
+    background-color: white;
+    height: 400px;
+    overflow: auto;
+    padding: 25px;
+    border-radius: 10px;
+    position: sticky;
+    top: 160px; 
+    margin-right: 50px;
+
+    scrollbar-width: thin;             
+    scrollbar-color: #ccc transparent; 
+}
+
+
+.JobListingsParent{
+    border: 0px solid blue;
+}
+
+.multiSelectDropdown{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.filterParent{
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 250px;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    position: relative;
+}
+
+.Filters{
+    cursor: pointer;
+    min-height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filterItem{
+    padding: 6px;
+    margin: 2px;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.ulItems{
+    list-style: none;
+    padding: 5px;
+    margin: 0px;
+    margin-top: 5px;
+    margin-left: -6px;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: absolute;
+    width: 95%;
+    z-index: 1000;
+}
+
+.optionItem{
+  padding: 6px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.optionItem:hover{
+  background-color: #0073e6;
+  color: white;
+}
+
+.optionItem.selected{
+  background-color: #0073e6;
+  color: white;
+}
+
+
+.jobListingsItems{
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 650px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jobListingsItems:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+
+.interestedNotInterested{
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.interestedNotInterested:hover{
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+
+
+
+
+.FiltersButton{
+  display: none;
+  margin: 1rem;
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.FiltersModalOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.FiltersModalContent{
+  background-color: white;
+  padding: 20px;
+  width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.CloseModalBtn{
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 1050px){
+  .FiltersParent {
+    display: none;
+  }
+
+  .FiltersButton {
+    display: inline-block;
+  }
+
+  .jobListingsItems {
+    width: 90%;
+  }
+}
+
+
+.modalOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent{
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
