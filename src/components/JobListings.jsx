@@ -35,7 +35,7 @@ function JobListings(props){
                         
                         <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center"}}>
                             <div>
-                                <h3>{job.title}</h3>
+                                <p style={{ marginBottom: "-7px", fontSize: "17px" }}><strong>{job.title}</strong></p>
                                 <p>{job.company_name}</p>
                             </div>
                             <div>

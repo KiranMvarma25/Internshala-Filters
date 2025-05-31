@@ -85,6 +85,14 @@ function App(){
 
   }, [filters, jobsData]);
 
+  function handleResetFilters(){
+    setFilters({
+      profile: [],
+      location: [],
+      duration: [],
+    });
+  }
+
   return (
     <>
       <h1 className="Heading">Internshala</h1>
@@ -152,6 +160,8 @@ function App(){
       <div className="Parent">
         <div className="FiltersParent">
           <Filters filters={filters} setFilters={setFilters} profilesOptions={profilesOptions} locationsOptions={locationsOptions} durationOptions={durationOptions} />
+          <br />
+          <button style={{border: "none", backgroundColor: "white", color: "#0073e6", fontSize: "medium"}} onClick={handleResetFilters}>Clear All</button>
         </div>
 
         <div className="JobListingsParent">
